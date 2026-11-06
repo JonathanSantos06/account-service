@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: account-service
+  mongodb:
+    uri: ${MONGODB_URI}
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
